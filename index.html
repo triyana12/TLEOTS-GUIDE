@@ -14,43 +14,101 @@ body{
     font-family:serif;
     background:#8b6f47;
     text-align:center;
+    overflow:hidden;
+    position:relative;
+}
+
+/* 🌸 background bunga biru samar */
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at 20% 30%, rgba(100,180,255,0.25), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(120,200,255,0.18), transparent 45%),
+    radial-gradient(circle at 40% 80%, rgba(90,160,255,0.15), transparent 50%);
+    z-index:0;
+    filter:blur(2px);
 }
 
 /* OPENING */
 #opening{
     position:absolute;
+    z-index:2;
 }
 
 /* ENTER WORLD */
 #enter{
     display:none;
+    flex-direction:column;
+    align-items:center;
+    z-index:2;
 }
 
+/* 🌙 Welcome text */
+.welcome{
+    font-size:22px;
+    color:#d6e6ff;
+    font-style:italic;
+    letter-spacing:2px;
+    opacity:0.9;
+}
+
+/* 🌟 TLEOTS GUIDE */
 h1{
-    color:#6fa8dc;
-    font-size:50px;
-    margin:0;
+    font-size:55px;
+    margin:5px 0;
+
+    font-family:"Georgia","Times New Roman",serif;
+    font-style:italic;
+    font-weight:bold;
+
+    background: linear-gradient(90deg, #6fa8dc, #ffd700, #6fa8dc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:0 0 10px rgba(255,215,0,0.6),
+                0 0 20px rgba(111,168,220,0.6);
 }
 
+/* 🌙 subtitle */
 p{
-    opacity:0.7;
+    opacity:0.8;
+    color:#d6e6ff;
+    font-style:italic;
 }
 
+/* 🪄 BUTTON 3D ANIMATED */
 button{
-    margin-top:20px;
-    padding:16px 40px;
+    margin-top:25px;
+    padding:18px 45px;
     font-size:22px;
     border:none;
-    border-radius:12px;
+    border-radius:14px;
     cursor:pointer;
-    background:#6fa8dc;
     color:white;
-    
-    button:hover{
-    transform:scale(1.08);
-    transition:0.2s;
-    }
 
+    background: linear-gradient(45deg, #6fa8dc, #ff6ec7, #ffd700);
+    background-size:300% 300%;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+
+    animation:gradientMove 5s infinite;
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* animasi warna hidup */
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 </style>
 
 </head>
@@ -59,6 +117,7 @@ button{
 
 <!-- 🌙 OPENING -->
 <div id="opening">
+    <div class="welcome">Welcome to</div>
     <h1>TLEOTS GUIDE</h1>
     <p>MB World</p>
 </div>
