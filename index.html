@@ -18,12 +18,10 @@ body{
     text-align:center;
 }
 
-/* OPENING */
 #opening{
     transition:opacity 1s ease;
 }
 
-/* JUDUL */
 h1{
     font-size:70px;
     color:#6fa8dc;
@@ -31,21 +29,17 @@ h1{
     margin:0;
 }
 
-/* SUBTITLE */
 p{
     font-size:16px;
     opacity:0.8;
 }
 
-/* ENTER WORLD */
 #enter{
     height:100vh;
     display:none;
     justify-content:center;
     align-items:center;
-}
 
-/* BUTTON */
 button{
     padding:14px 30px;
     font-size:18px;
@@ -62,7 +56,6 @@ button:hover{
     transform:scale(1.05);
 }
 
-/* MAWAR */
 .rose{
     width:80px;
     opacity:0.15;
@@ -75,23 +68,18 @@ button:hover{
 </head>
 
 <body>
-<img class="rose" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Rose_icon.svg/1024px-Rose_icon.svg.png" style="top:20px; left:20px;">
-<img class="rose" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Rose_icon.svg/1024px-Rose_icon.svg.png" style="top:20px; right:20px;">
-<img class="rose" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Rose_icon.svg/1024px-Rose_icon.svg.png" style="bottom:20px; left:20px;">
-<img class="rose" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Rose_icon.svg/1024px-Rose_icon.svg.png" style="bottom:20px; right:20px;">
+<img class="rose" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Rose_icon.svg">
 
-<!-- 🌙 OPENING -->
+
 <div id="opening">
     <h1>TLEOTS GUIDE</h1>
     <p>MB World</p>
 </div>
 
-<!-- 🚪 ENTER WORLD -->
 <div id="enter">
     <button onclick="startWorld()">Enter World</button>
 </div>
 
-<!-- ⚡ SCRIPT -->
 <script>
 
 setTimeout(() => {
