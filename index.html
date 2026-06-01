@@ -16,6 +16,16 @@ body{
     text-align:center;
 }
 
+/* OPENING */
+#opening{
+    position:absolute;
+}
+
+/* ENTER WORLD */
+#enter{
+    display:none;
+}
+
 h1{
     color:#6fa8dc;
     font-size:50px;
@@ -24,7 +34,6 @@ h1{
 
 p{
     opacity:0.7;
-    margin:5px;
 }
 
 button{
@@ -43,15 +52,28 @@ button{
 
 <body>
 
-<h1>TLEOTS GUIDE</h1>
-<p>MB World</p>
+<!-- 🌙 OPENING -->
+<div id="opening">
+    <h1>TLEOTS GUIDE</h1>
+    <p>MB World</p>
+</div>
 
-<button onclick="startWorld()">Enter World</button>
+<!-- 🚪 ENTER WORLD -->
+<div id="enter">
+    <button onclick="startWorld()">Enter World</button>
+</div>
 
 <script>
+
+setTimeout(() => {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("enter").style.display = "flex";
+}, 2500);
+
 function startWorld(){
     alert("Welcome to TLEOTS");
 }
+
 </script>
 
 </body>
